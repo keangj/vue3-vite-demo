@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "lint:code": "eslint --fix ./src --ext .vue,.js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "vue": "^3.2.2",
@@ -28,6 +30,7 @@
     "sass": "^1.37.5",
     "typescript": "^4.3.2",
     "vite": "^2.4.4",
-    "vue-tsc": "^0.2.2"
+    "vue-tsc": "^0.2.2",
+    "husky": "^7.0.0"
   }
 }
