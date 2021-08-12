@@ -16,8 +16,8 @@ export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 const Button = defineComponent({
   name: 'Button',
   props: buttonProps,
-  setup() {},
-  render() {
+  setup () {},
+  render () {
     const { $slots } = this
     return (
       <>
