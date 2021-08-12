@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      "src": resolve(__dirname, "src"),	// 配置根目录别名
-      "comps": resolve(__dirname, "src/components"),	// 配置组件目录别名
+      src: resolve(__dirname, 'src'), // 配置根目录别名
+      comps: resolve(__dirname, 'src/components') // 配置组件目录别名
     }
-  },
+  }
 })

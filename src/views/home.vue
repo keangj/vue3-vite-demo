@@ -7,9 +7,9 @@ export default defineComponent({
     Button
   },
   render: () => (
-      <>
-        <Button type="">提交</Button>
-      </>
+    <>
+      <Button>提交</Button>
+    </>
   )
 })
 </script>

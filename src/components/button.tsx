@@ -1,19 +1,14 @@
-import { defineComponent, ExtractPropTypes, PropType } from "vue"
+import { defineComponent, ExtractPropTypes, PropType } from 'vue'
 
 type IButtonType = PropType<
-  | 'default'
-  | 'primary'
-  | 'info'
-  | 'success'
-  | 'warning'
-  | 'error'
-  >
+  'default' | 'primary' | 'info' | 'success' | 'warning' | 'error'
+>
 
 const buttonProps = {
   type: {
     type: String as IButtonType,
     default: 'default'
-  },
+  }
 }
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
@@ -21,16 +16,12 @@ export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 const Button = defineComponent({
   name: 'Button',
   props: buttonProps,
-  setup() {
-
-  },
+  setup() {},
   render() {
     const { $slots } = this
     return (
       <>
-        <button>
-          {$slots.default?.()}
-        </button>
+        <button>{$slots.default?.()}</button>
       </>
     )
   }
