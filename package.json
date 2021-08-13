@@ -12,11 +12,11 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --fix"
+      "yarn lint:code"
     ],
     "*.vue": [
       "prettier --parser=vue --write",
-      "eslint --fix"
+      "yarn lint:code"
     ],
     "*.css": [
       "prettier --write"
