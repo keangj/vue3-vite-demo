@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-export default {
+module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -142,9 +142,7 @@ export default {
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
-  // ],
+  testPathIgnorePatterns: ['\\\\node_modules\\\\'],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -164,7 +162,16 @@ export default {
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.vue$': 'vue-jest',
-    '^.+\\.(j|t)sx?$': 'ts-jest'
+    '^.+\\.(j|t)sx?$': [
+      'babel-jest',
+      {
+        presets: [
+          ['@babel/preset-env', { targets: { node: 'current' } }],
+          ['@babel/preset-typescript']
+        ],
+        plugins: ['@vue/babel-plugin-jsx']
+      }
+    ]
   }
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
