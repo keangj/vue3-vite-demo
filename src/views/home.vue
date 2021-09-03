@@ -1,15 +1,16 @@
-<script lang="tsx">
+<template>
+  <button @click="getInfo">getInfo</button>
+</template>
+<script>
 import { defineComponent } from 'vue'
-import Button from '../components/button'
+import { User } from 'api'
 export default defineComponent({
   name: 'Home',
-  components: {
-    Button
-  },
-  render: () => (
-    <>
-      <Button>提交</Button>
-    </>
-  )
+  setup () {
+    const getInfo = () => {
+      User.getInfo().then((res) => {})
+    }
+    return { getInfo }
+  }
 })
 </script>

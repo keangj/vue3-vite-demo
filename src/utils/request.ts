@@ -4,7 +4,7 @@ const baseURL: string = import.meta.env.VITE_BASE_API
 
 const axios = Axios.create({
   baseURL,
-  timeout: 10000
+  timeout: 5000
 })
 
 // const responseHandle = {
