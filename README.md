@@ -11,7 +11,10 @@ vue3 + TS + Vite
 ``` sh
 yarn install
 yarn global add commitizen
+yarn dev
 ```
+
+本项目使用 `commitlint` 验证 `git commit` 请按照 [**Angular 规范的 Commit Message**](https://i3o61hzm64.feishu.cn/docs/doccnp47z5z4IzGtbv4ZBjom6Od) 提交代码
 
 ### 依赖检查
 
