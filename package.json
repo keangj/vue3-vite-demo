@@ -26,7 +26,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "vue": "^3.2.2",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.15.0",
