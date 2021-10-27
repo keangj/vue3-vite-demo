@@ -12,5 +12,12 @@ export default defineConfig({
       comps: resolve(__dirname, 'src/components'), // 配置组件目录别名
       api: resolve(__dirname, 'src/api') // 配置组件目录别名
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "src/styles/var/_var.scss";'
+      }
+    }
   }
 })

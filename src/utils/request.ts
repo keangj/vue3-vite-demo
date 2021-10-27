@@ -18,8 +18,8 @@ axios.interceptors.request.use(
      * 根据你的项目实际情况来对 config 做处理
      * 这里对 config 不做任何处理，直接返回
      */
-    const token = ''
-    token && (config.headers.Authorization = token)
+    // const token = ''
+    // token && (config.headers.Authorization = token)
     return config
   },
   (error) => {
