@@ -3448,8 +3448,8 @@ escodegen@^2.0.0:
 
 eslint-config-standard@^16.0.3:
   version "16.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-16.0.3.tgz#6c8761e544e96c531ff92642eeb87842b8488516"
-  integrity sha512-x4fmJL5hGqNJKGHSjnLdgA6U6h1YW/G2dW9fA+cyVur4SK6lyue8+UgNKWlZtUDTXvgKDD/Oa3GQjmB5kjtVvg==
+  resolved "https://registry.nlark.com/eslint-config-standard/download/eslint-config-standard-16.0.3.tgz?cache=0&sync_timestamp=1621877447113&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-config-standard%2Fdownload%2Feslint-config-standard-16.0.3.tgz#6c8761e544e96c531ff92642eeb87842b8488516"
+  integrity sha1-bIdh5UTpbFMf+SZC7rh4QrhIhRY=
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
@@ -3476,7 +3476,7 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-import@^2.24.0:
+eslint-plugin-import@^2.25.2:
   version "2.25.2"
   resolved "https://registry.npmmirror.com/eslint-plugin-import/download/eslint-plugin-import-2.25.2.tgz?cache=0&sync_timestamp=1634079704708&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-plugin-import%2Fdownload%2Feslint-plugin-import-2.25.2.tgz#b3b9160efddb702fc1636659e71ba1d10adbe9e9"
   integrity sha1-s7kWDv3bcC/BY2ZZ5xuh0Qrb6ek=
@@ -3507,12 +3507,12 @@ eslint-plugin-node@^11.1.0:
     resolve "^1.10.1"
     semver "^6.1.0"
 
-eslint-plugin-promise@^5.1.0:
+eslint-plugin-promise@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmmirror.com/eslint-plugin-promise/download/eslint-plugin-promise-5.1.1.tgz#9674d11c056d1bafac38e4a3a9060be740988d90"
   integrity sha1-lnTRHAVtG6+sOOSjqQYL50CYjZA=
 
-eslint-plugin-vue@^7.16.0:
+eslint-plugin-vue@^7.20.0:
   version "7.20.0"
   resolved "https://registry.npmmirror.com/eslint-plugin-vue/download/eslint-plugin-vue-7.20.0.tgz?cache=0&sync_timestamp=1634704359960&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-plugin-vue%2Fdownload%2Feslint-plugin-vue-7.20.0.tgz#98c21885a6bfdf0713c3a92957a5afeaaeed9253"
   integrity sha1-mMIYhaa/3wcTw6kpV6Wv6q7tklM=

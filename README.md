@@ -8,7 +8,7 @@ vue3 + TS + Vite
 
 ## 快速开始
 
-``` sh
+```sh
 yarn install
 yarn global add commitizen
 yarn dev
@@ -18,19 +18,19 @@ yarn dev
 
 ### 依赖检查
 
-``` sh
-node v14.17.3 
+```sh
+node v14.17.3
 ```
 
 ### 构建
 
-``` sh
+```sh
 yarn build
 ```
 
 ### 运行
 
-``` sh
+```sh
 yarn dev
 ```
 

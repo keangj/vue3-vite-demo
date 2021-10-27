@@ -13,7 +13,7 @@ describe('button', () => {
         onClick
       }
     })
-    instance.trailer('click')
+    instance.trigger('click')
     expect(onClick).not.toHaveBeenCalled()
   })
 })
