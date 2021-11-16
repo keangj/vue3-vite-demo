@@ -1,41 +1,39 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
-import { User } from 'api'
+import { User } from 'api/index'
+import { useNamespace } from 'src/hooks/common'
+
+const prefixCls = useNamespace('home')
+
 const getInfo = () => {
-  User.getInfo().then((res) => {})
+  User.getInfo().then(() => {})
 }
 
 // defineProps<{ msg: string }>()
 
-const count = ref(0)
 const msg = ref(0)
 </script>
 
 <template>
-  <div>hi</div>
-  <button @click="getInfo">getInfo</button>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+<div :class="prefixCls.multiPrefixCls">
+    <div>hi</div>
+    <button @click="getInfo">getInfo</button>
+    <h1>{{ msg }}</h1>
+  </div>
 </template>
+
+<style lang="scss" module>
+$moduleName: 'home';
+$prefix-cls: '#{$namespace}-#{moduleName}';
+$mobile-prefix-cls: '#{$namespace}-m-#{moduleName}';
+@media screen and (min-width: 769px) {
+  .#{$prefix-cls} {
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .#{$mobile-prefix-cls} {
+
+  }
+}
+</style>

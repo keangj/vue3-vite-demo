@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HelloWorld from 'src/views/Home.vue'
+</script>
 
 <template>
   <HelloWorld></HelloWorld>
