@@ -14,7 +14,7 @@ export interface UserInfo {
 }
 
 export default {
-  getInfo () {
+  getUserInfo () {
     return request.get(URL.GET_INFO, {})
   },
   register ({ username, password }: UserInfo) {

@@ -8,9 +8,11 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      src: resolve(__dirname, 'src'), // 配置根目录别名
-      comps: resolve(__dirname, 'src/components'), // 配置组件目录别名
-      api: resolve(__dirname, 'src/api') // 配置组件目录别名
+      src: resolve(__dirname, 'src'),
+      comps: resolve(__dirname, 'src/components'),
+      api: resolve(__dirname, 'src/api'),
+      hooks: resolve(__dirname, 'src/hooks'),
+      types: resolve(__dirname, 'types')
     }
   },
   css: {
@@ -27,6 +29,14 @@ export default defineConfig({
         // 生产环境时移除console
         drop_console: true,
         drop_debugger: true
+      }
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          axios: ['axios'],
+          vue: ['vue']
+        }
       }
     }
   }

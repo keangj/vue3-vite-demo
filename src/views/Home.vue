@@ -6,7 +6,7 @@ import { useNamespace } from 'src/hooks/common'
 const prefixCls = useNamespace('home')
 
 const getInfo = () => {
-  User.getInfo().then(() => {})
+  User.getUserInfo().then(() => { })
 }
 
 // defineProps<{ msg: string }>()
@@ -15,7 +15,7 @@ const msg = ref(0)
 </script>
 
 <template>
-<div :class="prefixCls.multiPrefixCls">
+  <div :class="prefixCls.multiPrefixCls">
     <div>hi</div>
     <button @click="getInfo">getInfo</button>
     <h1>{{ msg }}</h1>
@@ -23,9 +23,9 @@ const msg = ref(0)
 </template>
 
 <style lang="scss" module>
-$moduleName: 'home';
-$prefix-cls: '#{$namespace}-#{moduleName}';
-$mobile-prefix-cls: '#{$namespace}-m-#{moduleName}';
+$moduleName: "home";
+$prefix-cls: "#{$namespace}-#{moduleName}";
+$mobile-prefix-cls: "#{$namespace}-m-#{moduleName}";
 @media screen and (min-width: 769px) {
   .#{$prefix-cls} {
   }
@@ -33,7 +33,6 @@ $mobile-prefix-cls: '#{$namespace}-m-#{moduleName}';
 
 @media screen and (max-width: 768px) {
   .#{$mobile-prefix-cls} {
-
   }
 }
 </style>

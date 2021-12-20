@@ -1,4 +1,11 @@
-import Axios from 'axios'
+import Axios, { AxiosResponse } from 'axios'
+
+interface Result<T = any> {
+  code: number;
+  type: 'success' | 'error' | 'warning';
+  message: string;
+  result: T;
+}
 
 const baseURL: string = import.meta.env.VITE_BASE_API
 
@@ -29,12 +36,12 @@ axios.interceptors.request.use(
 
 // 后置拦截器（获取到响应时的拦截）
 axios.interceptors.response.use(
-  (response) => {
+  (response: AxiosResponse<any>) => {
     /**
      * 根据你的项目实际情况来对 response 和 error 做处理
      * 这里对 response 和 error 不做任何处理，直接返回
      */
-    return response
+    return response.data
   },
   (error) => {
     if (error.response && error.response.data) {
