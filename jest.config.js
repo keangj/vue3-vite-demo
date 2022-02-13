@@ -165,7 +165,7 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.vue$': 'vue-jest',
+    '^.+\\.vue$': 'vue3-jest',
     '^.+\\.(j|t)sx?$': [
       'babel-jest',
       {
