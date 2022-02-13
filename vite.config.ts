@@ -35,7 +35,10 @@ export default defineConfig({
       output: {
         manualChunks: {
           axios: ['axios'],
-          vue: ['vue']
+          vue: ['vue'],
+          'normalize.css': ['normalize.css'],
+          pinia: ['pinia'],
+          'vue-router': ['vue-router']
         }
       }
     }
