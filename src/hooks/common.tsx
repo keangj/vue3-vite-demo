@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const nameSpace = ref('ti')
+const nameSpace = ref('namespace')
 
 export function useNamespace (scope: string) {
   return {

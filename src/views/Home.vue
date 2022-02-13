@@ -17,22 +17,19 @@ const msg = ref(0)
 <template>
   <div :class="prefixCls.multiPrefixCls">
     <div>hi</div>
-    <button @click="getInfo">getInfo</button>
+    <button @click="getInfo">x</button>
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 $moduleName: "home";
-$prefix-cls: "#{$namespace}-#{moduleName}";
-$mobile-prefix-cls: "#{$namespace}-m-#{moduleName}";
-@media screen and (min-width: 769px) {
-  .#{$prefix-cls} {
-  }
-}
+$prefix-cls: "#{$namespace}-#{$moduleName}";
 
-@media screen and (max-width: 768px) {
-  .#{$mobile-prefix-cls} {
+.#{$prefix-cls} {
+  h1 {
+    width: 200px;
+    background: #eee;
   }
 }
 </style>
