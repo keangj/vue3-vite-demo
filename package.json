@@ -15,11 +15,11 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "yarn lint:code"
+      "pnpm lint:code"
     ],
     "*.vue": [
       "prettier --parser=vue --write",
-      "yarn lint:code"
+      "pnpm lint:code"
     ],
     "*.css": [
       "prettier --write"

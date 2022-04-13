@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from 'src/views/Home.vue'
-import Icon from './components/icon';
+import Icon from './components/icon'
 </script>
 
 <template>
@@ -10,5 +10,4 @@ import Icon from './components/icon';
   <router-view></router-view>
 </template>
 
-<style>
-</style>
+<style></style>

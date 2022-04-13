@@ -23,7 +23,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       vueJsx(),
       createSvgIconsPlugin({
         iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
-        symbolId: 'icon-[dir]-[name]',
+        symbolId: 'icon-[dir]-[name]'
       }),
       configCompressPlugin(
         VITE_BUILD_COMPRESS as 'gzip' | 'brotli' | 'none',

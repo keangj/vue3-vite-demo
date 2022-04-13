@@ -7,7 +7,7 @@ const iconProps = {
 
 export type IconProps = ExtractPropTypes<typeof iconProps>
 
-export const Icon: FunctionalComponent<IconProps> = (props, context) => {
+export const Icon: FunctionalComponent<IconProps> = (props) => {
   const { name, color } = props
 
   return (

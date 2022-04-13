@@ -1,20 +1,20 @@
-import type { Plugin } from 'vite';
-import viteCompression from 'vite-plugin-compression';
+import type { Plugin } from 'vite'
+import viteCompression from 'vite-plugin-compression'
 
 export function configCompressPlugin(
   compress: 'gzip' | 'brotli' | 'none',
-  deleteOriginFile = false,
+  deleteOriginFile = false
 ): Plugin | Plugin[] {
-  const compressList = compress.split(',');
-  const plugins: Plugin[] = [];
+  const compressList = compress.split(',')
+  const plugins: Plugin[] = []
 
   if (compressList.includes('gzip')) {
     plugins.push(
       viteCompression({
         ext: '.gz',
-        deleteOriginFile,
-      }),
-    );
+        deleteOriginFile
+      })
+    )
   }
 
   if (compressList.includes('brotli')) {
@@ -22,9 +22,9 @@ export function configCompressPlugin(
       viteCompression({
         ext: '.br',
         algorithm: 'brotliCompress',
-        deleteOriginFile,
-      }),
-    );
+        deleteOriginFile
+      })
+    )
   }
-  return plugins;
+  return plugins
 }

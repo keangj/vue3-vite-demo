@@ -14,19 +14,19 @@ export interface UserInfo {
 }
 
 export default {
-  getUserInfo () {
+  getUserInfo() {
     return request.get(URL.GET_INFO, {})
   },
-  register ({ username, password }: UserInfo) {
+  register({ username, password }: UserInfo) {
     return request.post(URL.REGISTER, { username, password })
   },
-  login ({ username, password }: UserInfo) {
+  login({ username, password }: UserInfo) {
     return request.post(URL.LOGIN, { username, password })
   },
-  logout () {
+  logout() {
     return request.get(URL.LOGOUT)
   },
-  deleteUser (userId: string) {
+  deleteUser(userId: string) {
     return request.delete(URL.DELETE_USER.replace(':userId', userId))
   }
 }

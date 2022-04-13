@@ -1,4 +1,4 @@
-# 项目名称
+# 项目名称 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 <!-- 写一段简短的话描述项目 -->
 

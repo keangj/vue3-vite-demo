@@ -10,8 +10,8 @@
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: 'Vuex',
-  setup () {
+  name: 'TestComps',
+  setup() {
     const count = ref<number>(0)
     const increment = () => {
       count.value += 1

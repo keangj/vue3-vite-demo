@@ -4,28 +4,28 @@ export function configImageminPlugin() {
   return viteImagemin({
     gifsicle: {
       optimizationLevel: 3,
-      interlaced: false,
+      interlaced: false
     },
     optipng: {
-      optimizationLevel: 7,
+      optimizationLevel: 7
     },
     mozjpeg: {
-      quality: 20,
+      quality: 20
     },
     pngquant: {
       quality: [0.8, 0.9],
-      speed: 4,
+      speed: 4
     },
     svgo: {
       plugins: [
         {
-          name: 'removeViewBox',
+          name: 'removeViewBox'
         },
         {
           name: 'removeEmptyAttrs',
-          active: false,
-        },
-      ],
+          active: false
+        }
+      ]
     },
     webp: {
       quality: 50

@@ -14,10 +14,10 @@ const buttonProps = {
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 
 const Button = defineComponent({
-  name: 'Button',
+  name: 'KButton',
   props: buttonProps,
-  setup () {},
-  render () {
+  setup() {},
+  render() {
     const { $slots } = this
     return (
       <>
