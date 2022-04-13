@@ -15,6 +15,7 @@
       "src/*": ["src/*"],
       "api/*": ["src/api/*"],
       "types/*": ["types/*"],
+      "hooks/*": ["hooks/*"],
       "comps/*": ["src/components/*"]
     }
   },
