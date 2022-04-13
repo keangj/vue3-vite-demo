@@ -22,7 +22,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       vue(),
       vueJsx(),
       createSvgIconsPlugin({
-        iconDirs: [resolve(process.cwd(), 'src/icons')],
+        iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
         symbolId: 'icon-[dir]-[name]',
       }),
       configCompressPlugin(
@@ -46,6 +46,11 @@ export default ({ mode }: ConfigEnv): UserConfig => {
           additionalData: '@import "src/styles/var/_var.scss";'
         }
       }
+    },
+    server: {
+      https: false,
+      host: '0.0.0.0',
+      strictPort: false
     },
     build: {
       minify: 'terser',
