@@ -20,6 +20,7 @@ specifiers:
   cz-conventional-changelog: 3.3.0
   cz-customizable: 6.3.0
   eslint: ^8.13.0
+  eslint-config-prettier: ^8.5.0
   eslint-config-standard: ^16.0.3
   eslint-plugin-import: ^2.26.0
   eslint-plugin-node: ^11.1.0
@@ -64,6 +65,7 @@ devDependencies:
   cz-conventional-changelog: 3.3.0
   cz-customizable: 6.3.0
   eslint: 8.13.0
+  eslint-config-prettier: 8.5.0_eslint@8.13.0
   eslint-config-standard: 16.0.3_4e3767bb061a43bc3978ec6596bc3350
   eslint-plugin-import: 2.26.0_eslint@8.13.0
   eslint-plugin-node: 11.1.0_eslint@8.13.0
@@ -4113,6 +4115,15 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
+    dev: true
+
+  /eslint-config-prettier/8.5.0_eslint@8.13.0:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.13.0
     dev: true
 
   /eslint-config-standard/16.0.3_4e3767bb061a43bc3978ec6596bc3350:
