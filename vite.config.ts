@@ -1,4 +1,4 @@
-import type { UserConfig, ConfigEnv } from 'vite'
+import type { UserConfigExport, ConfigEnv } from 'vite'
 import { loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
@@ -6,9 +6,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { configCompressPlugin } from './build/plugin/compress'
 import { configImageminPlugin } from './build/plugin/imagemin'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
-export default ({ mode }: ConfigEnv): UserConfig => {
+export default ({ mode, command }: ConfigEnv): UserConfigExport => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
   const {
@@ -21,6 +22,10 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     plugins: [
       vue(),
       vueJsx(),
+      viteMockServe({
+        mockPath: 'mock',
+        localEnabled: command === 'serve'
+      }),
       createSvgIconsPlugin({
         iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
         symbolId: 'icon-[dir]-[name]'
