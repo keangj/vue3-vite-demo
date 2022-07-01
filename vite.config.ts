@@ -31,7 +31,7 @@ export default ({ mode, command }: ConfigEnv): UserConfigExport => {
         symbolId: 'icon-[dir]-[name]'
       }),
       configCompressPlugin(
-        VITE_BUILD_COMPRESS as 'gzip' | 'brotli' | 'none',
+        VITE_BUILD_COMPRESS as 'gzip' | 'brotli' | 'none' || 'none',
         VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE === 'true'
       ),
       VITE_USE_IMAGEMIN === 'true' && configImageminPlugin()
